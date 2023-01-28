@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shane_Goodson_Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UxQ-nB-5iG">
+                                <rect key="frame" x="36" y="109" width="358" height="739"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULv-WU-Se3">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="183.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jij-EJ-LSy" userLabel="currentTimeLabel">
+                                                <rect key="frame" x="8" y="8" width="342" height="167.33333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Jij-EJ-LSy" firstAttribute="top" secondItem="ULv-WU-Se3" secondAttribute="topMargin" id="AC0-Fb-YJa"/>
+                                            <constraint firstItem="Jij-EJ-LSy" firstAttribute="leading" secondItem="ULv-WU-Se3" secondAttribute="leadingMargin" id="dba-xC-M5f"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Jij-EJ-LSy" secondAttribute="bottom" id="j22-zX-mzU"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Jij-EJ-LSy" secondAttribute="trailing" id="sy4-UM-oMT"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GO9-ZK-caN">
+                                        <rect key="frame" x="0.0" y="185.33333333333331" width="358" height="183.33333333333331"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGP-pZ-0cx">
+                                                <rect key="frame" x="8" y="8" width="342" height="167.33333333333334"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                            </datePicker>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="gGP-pZ-0cx" firstAttribute="leading" secondItem="GO9-ZK-caN" secondAttribute="leadingMargin" id="NCi-2v-8me"/>
+                                            <constraint firstItem="gGP-pZ-0cx" firstAttribute="top" secondItem="GO9-ZK-caN" secondAttribute="topMargin" id="bdh-uO-Poo"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="gGP-pZ-0cx" secondAttribute="trailing" id="qns-r2-bGe"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="gGP-pZ-0cx" secondAttribute="bottom" id="wjX-C6-ujD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ix3-Vy-xhS">
+                                        <rect key="frame" x="0.0" y="370.66666666666669" width="358" height="183.00000000000006"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6Q-PQ-7KT">
+                                                <rect key="frame" x="8" y="8" width="342" height="167"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Start Time / Stop Music">
+                                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="S6Q-PQ-7KT" firstAttribute="leading" secondItem="Ix3-Vy-xhS" secondAttribute="leadingMargin" id="8Le-a6-ZQz"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="S6Q-PQ-7KT" secondAttribute="bottom" id="EHL-SV-l59"/>
+                                            <constraint firstItem="S6Q-PQ-7KT" firstAttribute="top" secondItem="Ix3-Vy-xhS" secondAttribute="topMargin" id="EyJ-Qf-TOA"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="S6Q-PQ-7KT" secondAttribute="trailing" id="fkr-wl-bGf"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7p-9z-nGk">
+                                        <rect key="frame" x="0.0" y="555.66666666666663" width="358" height="183.33333333333337"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tSW-fa-1JE">
+                                                <rect key="frame" x="8" y="8" width="342" height="167.33333333333334"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbW-qG-g3b">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="167.33333333333334"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TH6-TW-KeA" userLabel="Countdown">
+                                                        <rect key="frame" x="172" y="0.0" width="170" height="167.33333333333334"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="tSW-fa-1JE" firstAttribute="top" secondItem="B7p-9z-nGk" secondAttribute="topMargin" id="1ks-Fo-Olt"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="tSW-fa-1JE" secondAttribute="trailing" id="KPT-Y5-n2c"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="tSW-fa-1JE" secondAttribute="bottom" id="NMa-2G-asm"/>
+                                            <constraint firstItem="tSW-fa-1JE" firstAttribute="leading" secondItem="B7p-9z-nGk" secondAttribute="leadingMargin" id="Zpo-Is-ATP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UxQ-nB-5iG" secondAttribute="trailing" constant="36" id="Fc2-WR-cgm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UxQ-nB-5iG" secondAttribute="bottom" constant="50" id="Zjd-gb-9tr"/>
+                            <constraint firstItem="UxQ-nB-5iG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="dsT-9K-eIH"/>
+                            <constraint firstItem="UxQ-nB-5iG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="xSM-kc-chb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="Jij-EJ-LSy" id="Jbz-IS-DLl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
