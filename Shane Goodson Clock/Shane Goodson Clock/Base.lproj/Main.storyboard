@@ -43,6 +43,9 @@
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGP-pZ-0cx">
                                                 <rect key="frame" x="8" y="8" width="342" height="167.33333333333334"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <connections>
+                                                    <action selector="timeSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="SeR-7R-OGf"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,6 +66,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Start Time / Stop Music">
                                                     <color key="baseForegroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="startTimerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mJn-sQ-axv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -115,7 +121,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countDownTimer" destination="gGP-pZ-0cx" id="Lf8-cg-qmM"/>
                         <outlet property="currentTimeLabel" destination="Jij-EJ-LSy" id="Jbz-IS-DLl"/>
+                        <outlet property="startStopButton" destination="S6Q-PQ-7KT" id="CoT-Xx-BeB"/>
+                        <outlet property="timeRemainingLabel" destination="TH6-TW-KeA" id="fBg-zS-fnC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
