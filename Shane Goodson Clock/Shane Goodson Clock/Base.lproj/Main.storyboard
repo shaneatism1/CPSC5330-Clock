@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nvr-KE-AAV">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UxQ-nB-5iG">
                                 <rect key="frame" x="36" y="109" width="358" height="739"/>
                                 <subviews>
@@ -29,7 +33,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Jij-EJ-LSy" firstAttribute="top" secondItem="ULv-WU-Se3" secondAttribute="topMargin" id="AC0-Fb-YJa"/>
                                             <constraint firstItem="Jij-EJ-LSy" firstAttribute="leading" secondItem="ULv-WU-Se3" secondAttribute="leadingMargin" id="dba-xC-M5f"/>
@@ -43,12 +47,9 @@
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGP-pZ-0cx">
                                                 <rect key="frame" x="8" y="8" width="342" height="167.33333333333334"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                <connections>
-                                                    <action selector="timeSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="t3H-JY-5oO"/>
-                                                </connections>
                                             </datePicker>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="gGP-pZ-0cx" firstAttribute="leading" secondItem="GO9-ZK-caN" secondAttribute="leadingMargin" id="NCi-2v-8me"/>
                                             <constraint firstItem="gGP-pZ-0cx" firstAttribute="top" secondItem="GO9-ZK-caN" secondAttribute="topMargin" id="bdh-uO-Poo"/>
@@ -71,7 +72,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="S6Q-PQ-7KT" firstAttribute="leading" secondItem="Ix3-Vy-xhS" secondAttribute="leadingMargin" id="8Le-a6-ZQz"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="S6Q-PQ-7KT" secondAttribute="bottom" id="EHL-SV-l59"/>
@@ -100,7 +101,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="tSW-fa-1JE" firstAttribute="top" secondItem="B7p-9z-nGk" secondAttribute="topMargin" id="1ks-Fo-Olt"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="tSW-fa-1JE" secondAttribute="trailing" id="KPT-Y5-n2c"/>
@@ -109,21 +110,28 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nvr-KE-AAV" secondAttribute="trailing" id="21f-cD-gsG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UxQ-nB-5iG" secondAttribute="trailing" constant="36" id="Fc2-WR-cgm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UxQ-nB-5iG" secondAttribute="bottom" constant="50" id="Zjd-gb-9tr"/>
                             <constraint firstItem="UxQ-nB-5iG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="dsT-9K-eIH"/>
+                            <constraint firstItem="nvr-KE-AAV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nD0-rI-16A"/>
+                            <constraint firstAttribute="bottom" secondItem="nvr-KE-AAV" secondAttribute="bottom" id="uKl-uO-j6L"/>
                             <constraint firstItem="UxQ-nB-5iG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="xSM-kc-chb"/>
+                            <constraint firstItem="nvr-KE-AAV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yWE-F0-Ek1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="background" destination="nvr-KE-AAV" id="Vxy-E7-EeV"/>
                         <outlet property="buttonText" destination="S6Q-PQ-7KT" id="wJ7-B4-dHi"/>
                         <outlet property="currentTimeLabel" destination="Jij-EJ-LSy" id="UQa-b1-SQk"/>
                         <outlet property="timeRemainingLabel" destination="TH6-TW-KeA" id="glO-dc-dmm"/>
+                        <outlet property="timeSelect" destination="gGP-pZ-0cx" id="qXK-jY-6Ao"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
