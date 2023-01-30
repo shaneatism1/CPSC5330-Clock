@@ -44,7 +44,7 @@
                                                 <rect key="frame" x="8" y="8" width="342" height="167.33333333333334"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <connections>
-                                                    <action selector="timeSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="SeR-7R-OGf"/>
+                                                    <action selector="timeSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="t3H-JY-5oO"/>
                                                 </connections>
                                             </datePicker>
                                         </subviews>
@@ -63,11 +63,11 @@
                                                 <rect key="frame" x="8" y="8" width="342" height="167"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Start Time / Stop Music">
+                                                <buttonConfiguration key="configuration" style="plain" title="Start">
                                                     <color key="baseForegroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="startTimerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mJn-sQ-axv"/>
+                                                    <action selector="startTimerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="23s-Jx-xOB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -121,10 +121,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="countDownTimer" destination="gGP-pZ-0cx" id="Lf8-cg-qmM"/>
-                        <outlet property="currentTimeLabel" destination="Jij-EJ-LSy" id="Jbz-IS-DLl"/>
-                        <outlet property="startStopButton" destination="S6Q-PQ-7KT" id="CoT-Xx-BeB"/>
-                        <outlet property="timeRemainingLabel" destination="TH6-TW-KeA" id="fBg-zS-fnC"/>
+                        <outlet property="buttonText" destination="S6Q-PQ-7KT" id="wJ7-B4-dHi"/>
+                        <outlet property="currentTimeLabel" destination="Jij-EJ-LSy" id="UQa-b1-SQk"/>
+                        <outlet property="timeRemainingLabel" destination="TH6-TW-KeA" id="glO-dc-dmm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
