@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var currentTimeLabel: UILabel!
     var timer = Timer()
     var timeLeft : Int?
+    var alarm: AVAudioPlayer?
     @IBOutlet weak var timeRemainingLabel: UILabel!
     @IBOutlet weak var buttonText: UIButton!
     @IBOutlet weak var timeSelect: UIDatePicker!
@@ -21,6 +23,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         getCurrentTime()
         timeRemainingLabel.text = ""
+        
+        guard let path = Bundle.main.path(forResource: "Alarm", ofType:"wav")
+        else {print("not found")
+            return}
+        let url = URL(fileURLWithPath: path)
+        do{
+            alarm = try AVAudioPlayer(contentsOf: url)
+        }catch{}
     }
     
     @IBAction func startTimerButton(_ sender: UIButton) {
@@ -74,10 +84,10 @@ class ViewController: UIViewController {
     }
     
     func playMusic() {
-        
+        alarm?.play()
     }
     
     func stopMusic() {
-        
+        alarm?.stop()
     }
 }

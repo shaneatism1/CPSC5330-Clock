@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B39EAE76298C869B00F0E775 /* Alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = B39EAE75298C869B00F0E775 /* Alarm.wav */; };
 		B3BE7FF929820D7000A9FCE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE7FF829820D7000A9FCE1 /* AppDelegate.swift */; };
 		B3BE7FFB29820D7000A9FCE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE7FFA29820D7000A9FCE1 /* SceneDelegate.swift */; };
 		B3BE7FFD29820D7000A9FCE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE7FFC29820D7000A9FCE1 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B39EAE75298C869B00F0E775 /* Alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Alarm.wav; sourceTree = "<group>"; };
 		B3BE7FF529820D7000A9FCE1 /* Shane Goodson Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shane Goodson Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3BE7FF829820D7000A9FCE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3BE7FFA29820D7000A9FCE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B39EAE72298C860900F0E775 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B39EAE75298C869B00F0E775 /* Alarm.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		B3BE7FEC29820D7000A9FCE1 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 				B3BE7FFE29820D7000A9FCE1 /* Main.storyboard */,
 				B3BE800129820D7000A9FCE1 /* Assets.xcassets */,
 				B3BE800329820D7000A9FCE1 /* LaunchScreen.storyboard */,
+				B39EAE72298C860900F0E775 /* Sounds */,
 				B3BE800629820D7000A9FCE1 /* Info.plist */,
 			);
 			path = "Shane Goodson Clock";
@@ -127,6 +138,7 @@
 			files = (
 				B3BE800529820D7000A9FCE1 /* LaunchScreen.storyboard in Resources */,
 				B3BE800229820D7000A9FCE1 /* Assets.xcassets in Resources */,
+				B39EAE76298C869B00F0E775 /* Alarm.wav in Resources */,
 				B3BE800029820D7000A9FCE1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
