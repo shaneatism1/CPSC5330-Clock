@@ -11,7 +11,8 @@ import AVFoundation
 class ViewController: UIViewController {
 
     @IBOutlet weak var currentTimeLabel: UILabel!
-    var timer = Timer()
+    weak var timer: Timer?
+    var clockTimer = Timer()
     var timeLeft : Int?
     var alarm: AVAudioPlayer?
     @IBOutlet weak var timeRemainingLabel: UILabel!
@@ -46,13 +47,14 @@ class ViewController: UIViewController {
             
             timeLeft = hour * 3600 + minute * 60
             
+            timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(startCountDown) , userInfo: nil, repeats: true)
             buttonText.setTitle("Stop Music", for: .normal)
         }
     }
     
     private func getCurrentTime() {
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.currentTime) , userInfo: nil, repeats: true)
+            clockTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.currentTime) , userInfo: nil, repeats: true)
     }
     
     @objc func currentTime() {
@@ -88,6 +90,6 @@ class ViewController: UIViewController {
     }
     
     func stopMusic() {
-        alarm?.stop()
+        alarm?.pause()
     }
 }
